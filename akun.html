@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akun - Nandur</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ACCOUNT SCREEN -->
+<div id="accountScreen" class="screen active">
+  <header class="topbar">
+    <div style="display:flex;align-items:center;gap:10px">
+      <h1>Akun Saya</h1>
+    </div>
+    <button id="backDashBtn" class="btn btn-ghost">Kembali ke Dashboard</button>
+  </header>
+  <main class="container">
+    <div class="account-info">
+      <div class="account-card">
+        <div class="account-label">Nama</div>
+        <div class="account-value" id="accName">--</div>
+      </div>
+      <div class="account-card">
+        <div class="account-label">Email</div>
+        <div class="account-value" id="accEmail">--</div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+      <div class="section-title" style="margin:0">Daftar Perangkat</div>
+      <button id="addDeviceBtn" class="btn btn-ghost btn-save">+ Tambah Perangkat</button>
+    </div>
+    <div id="deviceList" class="device-list"></div>
+  </main>
+</div>
+
+<!-- ADD DEVICE MODAL -->
+<div id="addDeviceModal" class="modal-overlay" style="display:none">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>Tambah Perangkat Baru</h3>
+      <button id="closeModalBtn" class="modal-close">&times;</button>
+    </div>
+    <form id="addDeviceForm" autocomplete="off">
+      <div class="fg">
+        <label for="devId">Device ID (Huruf kapital)</label>
+        <input type="text" id="devId" placeholder="Contoh: ESP32_001" required>
+      </div>
+      <div class="fg">
+        <label for="devKey">API Key</label>
+        <input type="password" id="devKey" placeholder="Masukkan API Key" required>
+      </div>
+      <div class="fg">
+        <label for="devName">Nama Perangkat</label>
+        <input type="text" id="devNameInput" placeholder="Contoh: Sensor Kebun Belakang" required>
+      </div>
+      <div class="fg">
+        <label for="devCrop">Pilih Tanaman</label>
+        <select id="devCrop" required>
+          <option value="padi">Padi</option>
+          <option value="jagung">Jagung</option>
+        </select>
+      </div>
+      <div id="addDeviceErr" class="err"></div>
+      <button type="submit" class="btn btn-green">Simpan Perangkat</button>
+    </form>
+  </div>
+</div>
+
+<script src="assets/js/devices.js"></script>
+<script src="assets/js/thresholds.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/mock-data.js"></script>
+</body>
+</html>
