@@ -36,10 +36,10 @@ Open `index.html` in a browser (no server needed — pure HTML/CSS/JS + localSto
 
 ### Guest Login
 
-| Device ID  | API Key     | Crop |
-|------------|-------------|------|
-| ESP32_001  | rahasia123  | Rice |
-| ESP32_002  | gantidong   | Corn |
+| Device ID  | API Key     |
+|------------|-------------|
+| ESP32_001  | rahasia123  |
+| ESP32_002  | gantidong   |
 
 ### NPK Simulation (Console)
 
